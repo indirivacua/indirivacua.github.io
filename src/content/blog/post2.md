@@ -3,7 +3,7 @@ title: "The Implementation of the RISE Algorithm for the Captum Framework"
 description: >
   This paper introduces an efficient implementation of the RISE method in PyTorch using the Captum library. RISE generates explanations for deep learning model predictions by randomly masking input parts. Experiments highlight the significance of the number and size of masks for achieving accurate and versatile interpretations.
 pubDate: "Aug 11 2023"
-heroImage: "/public/assets/rise.png"
+heroImage: "/assets/rise.png"
 badge: "Conference paper"
 tags: ["Black Box", "Computer Vision", "Deep Learning", "Interpretability", "RISE"]
 authors: ["Oscar Stanchi", "Franco Ronchetti", "Facundo Quiroga"]
