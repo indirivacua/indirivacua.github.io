@@ -5,25 +5,35 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="torch-eyepacs"
+    img="/eyepacs.png"
+    desc="EyePACS and EyeQ dataset downloader and loader for PyTorch."
+    url="https://github.com/indirivacua/torch-eyepacs"
+    badge="Research"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Satellite Data Collection System (DCS) Simulator for SABIA-Mar Constellation"
+    img="/dcss.png"
+    desc="Designed and implemented the Instrument Simulator (DCSS) for the Argentine Satellite Data Collection System (DCS), which will be utilized by the SABIA-Mar satellite constellation operated by CONAE and INVAP."
+    url="https://gridcomd.ing.unlp.edu.ar/sistema-dcs/"
+    badge=""
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="LSApp: Argentinian Sign Language Translation and Learning Application"
+    img="/lsapp.png"
+    desc="Web app that enables automatic recognition and translation of a short video recorded by the user, who is an interpreter of Argentine Sign Language (LSA), into Spanish text. This facilitates the integration of the deaf community."
+    url="https://github.com/midusi/lsapp"
+    badge="FOSS"
   />
 
-  <div>
+
+  <!-- <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
   </div>
 
@@ -47,5 +57,5 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/post_img.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     url="#"
-  />
+  /> -->
 </BaseLayout>
