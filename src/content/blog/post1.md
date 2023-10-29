@@ -5,7 +5,7 @@ description: >
 pubDate: "Jan 04 2023"
 heroImage: "/assets/AlphaPose.gif"
 badge: "Conference paper"
-tags: ["Computer Vision", "Dataset", "Deep Learnig", "LSA-T", "Sign Language Translation"]
+tags: ["Computer Vision", "Dataset", "Deep Learning", "LSA-T", "Sign Language Translation"]
 authors: ["Pedro Dal Bianco", "Gastón Ríos", "Franco Ronchetti", "Facundo Quiroga", "Oscar Stanchi", "Waldo Hasperué", "Alejandro Rosete"]
 ---
 
