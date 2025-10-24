@@ -12,6 +12,8 @@ const blogSchema = z.object({
     authors: z.array(z.string()).refine(items => new Set(items).size === items.length, {
         message: 'tags must be unique',
     }).optional(),
+    award: z.string().optional(),
+    award_name: z.string().optional(),
 });
 
 const storeSchema = z.object({

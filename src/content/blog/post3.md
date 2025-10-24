@@ -6,7 +6,7 @@ pubDate: "Oct 7 2024" #11
 heroImage: "/assets/cbrise.png"
 badge: "Conference paper"
 tags: ["Black Box", "Blurred Masks", "Computer Vision", "Convergence Detection", "Deep Learning", "Interpretability", "RISE"]
-authors: ["Oscar Stanchi", "Franco Ronchetti", "Pedro Dal Bianco", "Gastón Rios", "Santiago Ponte Ahon", "Waldo Hasperué", "Facundo Quiroga"]
+authors: ["Oscar Agustín Stanchi", "Franco Ronchetti", "Pedro Dal Bianco", "Gastón Rios", "Santiago Ponte Ahon", "Waldo Hasperué", "Facundo Quiroga"]
 ---
 
 ## Abstract
@@ -15,6 +15,8 @@ This paper presents significant advancements in the RISE (Randomized Input Sampl
 
 <div class="mt-8">
     <a class="btn" href="https://link.springer.com/chapter/10.1007/978-3-031-70807-7_4" target="_blank"> Full paper</a>
+    <span style="margin:10px"></span>
+    <a class="btn" href="https://github.com/indirivacua/cbrise" target="_blank"> Code on GitHub</a>
 </div>
 
 ## Citation

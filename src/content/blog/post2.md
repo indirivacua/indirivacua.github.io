@@ -6,7 +6,7 @@ pubDate: "Aug 11 2023"
 heroImage: "/assets/rise.png"
 badge: "Conference paper"
 tags: ["Black Box", "Computer Vision", "Deep Learning", "Interpretability", "RISE"]
-authors: ["Oscar Stanchi", "Franco Ronchetti", "Facundo Quiroga"]
+authors: ["Oscar Agustín Stanchi", "Franco Ronchetti", "Facundo Quiroga"]
 ---
 
 ## Abstract
@@ -15,6 +15,8 @@ This paper introduces an implementation of the RISE method, using the Captum lib
 
 <div class="mt-8">
     <a class="btn" href="https://link.springer.com/chapter/10.1007/978-3-031-40942-4_7" target="_blank"> Full paper</a>
+    <span style="margin:10px"></span>
+    <a class="btn" href="https://github.com/indirivacua/captum-rise" target="_blank"> Code on GitHub</a>
 </div>
 
 ## Citation

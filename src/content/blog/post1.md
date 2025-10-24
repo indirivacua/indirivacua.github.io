@@ -6,7 +6,7 @@ pubDate: "Jan 04 2023"
 heroImage: "/assets/AlphaPose.gif"
 badge: "Conference paper"
 tags: ["Computer Vision", "Dataset", "Deep Learning", "LSA-T", "Sign Language Translation"]
-authors: ["Pedro Dal Bianco", "Gastón Ríos", "Franco Ronchetti", "Facundo Quiroga", "Oscar Stanchi", "Waldo Hasperué", "Alejandro Rosete"]
+authors: ["Pedro Dal Bianco", "Gastón Ríos", "Franco Ronchetti", "Facundo Quiroga", "Oscar Agustín Stanchi", "Waldo Hasperué", "Alejandro Rosete"]
 ---
 
 ## Abstract
@@ -14,7 +14,9 @@ authors: ["Pedro Dal Bianco", "Gastón Ríos", "Franco Ronchetti", "Facundo Quir
 Sign language translation (SLT) is an active field of study that encompasses human-computer interaction, computer vision, natural language processing and machine learning. Progress on this field could lead to higher levels of integration of deaf people. This paper presents, to the best of our knowledge, the first continuous Argentinian Sign Language (LSA) dataset. It contains 14,880 sentence level videos of LSA extracted from the CN Sordos YouTube channel with labels and keypoints annotations for each signer. We also present a method for inferring the active signer, a detailed analysis of the characteristics of the dataset, a visualization tool to explore the dataset and a neural SLT model to serve as baseline for future experiments.
 
 <div class="mt-8">
-    <a class="btn" href="https://link.springer.com/chapter/10.1007/978-3-031-22419-5_25" target="_blank"> Full paper</a>
+    <a class="btn" href="https://arxiv.org/abs/2211.15481" target="_blank"> Full paper</a>
+    <span style="margin:10px"></span>
+    <a class="btn" href="https://github.com/midusi/LSA-T" target="_blank"> Code on GitHub</a>
 </div>
 
 ## Citation

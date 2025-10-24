@@ -1,28 +1,32 @@
 ---
-title: "SignAttention: On the Interpretability of Transformer Models for Sign Language Translation"
+title: "Bringing balance to hand shape classification: Mitigating data imbalance through generative models"
 description: >
-  This paper studies a Transformer-based model for translating Greek Sign Language to glosses and text. It finds that the model focuses on clusters of frames, with alignment weakening as glosses increase, and shifts from video frames to predicted tokens during translation. This work enhances understanding of SLT models and promotes more transparent translation systems.
-pubDate: "Oct 18 2024"
-heroImage: "/assets/signattention.png"
-badge: "Conference paper"
-tags: ["Sign Language Translation", "Transformers", "Attention Mechanism", "Greek Sign Language", "Interpretability"]
-authors: ["Oscar Agustín Stanchi", "Pedro Alejandro Dal Bianco", "Facundo Manuel Quiroga", "Franco Ronchetti", "Enzo Ferrante"]
+  This paper improves hand-shape classification in sign language by using GAN-generated images for pre-training. This boosts accuracy (up to 5% overall, 100% on rare classes), halves training time, and enables cross-dataset generalization. Pre-training with synthetic data outperforms other augmentation methods.
+pubDate: "Oct 7 2023"
+heroImage: "/assets/handshape.png"
+badge: "Journal paper"
+tags: ["Handshape Recognition", "Unbalanced Data", "Limited Data", "Sign Language", "Generative Adversarial Networks"]
+authors: ["Gaston Gustavo Rios", "Pedro Dal Bianco", "Franco Ronchetti", "Facundo Quiroga", "Oscar Agustín Stanchi", "Santiago Ponte Ahón", "Waldo Hasperué"]
 ---
 
 ## Abstract
 
-This paper presents the first comprehensive interpretability analysis of a Transformer-based Sign Language Translation (SLT) model, focusing on the translation from video-based Greek Sign Language to glosses and text. Leveraging the Greek Sign Language Dataset, we examine the attention mechanisms within the model to understand how it processes and aligns visual input with sequential glosses. Our analysis reveals that the model pays attention to clusters of frames rather than individual ones, with a diagonal alignment pattern emerging between poses and glosses, which becomes less distinct as the number of glosses increases. We also explore the relative contributions of cross-attention and self-attention at each decoding step, finding that the model initially relies on video frames but shifts its focus to previously predicted tokens as the translation progresses. This work contributes to a deeper understanding of SLT models, paving the way for the development of more transparent and reliable translation systems essential for real-world applications.
+Most sign language handshape datasets are severely limited and unbalanced, posing significant challenges to effective model training. In this paper, we explore the effectiveness of augmenting the training data of a handshape classifier by generating synthetic data. We use an EfficientNet classifier trained on the RWTH German sign language handshape dataset, which is small and heavily unbalanced, applying different strategies to combine generated and real images. We compare two Generative Adversarial Networks (GAN) architectures for data generation: ReACGAN, which uses label information to condition the data generation process through an auxiliary classifier, and SPADE, which utilizes spatially-adaptive normalization to condition the generation on pose information. ReACGAN allows for the generation of realistic images that align with specific handshape labels, while SPADE focuses on generating images with accurate spatial handshape configurations. Our proposed techniques improve the current state-of-the-art accuracy on the RWTH dataset by 5%, addressing the limitations of small and unbalanced datasets. Additionally, our method demonstrates the capability to generalize across different sign language datasets by leveraging pose-based generation trained on the extensive HaGRID dataset. We achieve comparable performance to single-source trained classifiers without the need for retraining the generator.
 
 <div class="mt-8">
-    <a class="btn" href="https://arxiv.org/abs/2410.14506" target="_blank"> Full paper</a>
+    <a class="btn" href="https://arxiv.org/abs/2507.17008" target="_blank"> Full paper</a>
+    <span style="margin:10px"></span>
+    <a class="btn" href="https://github.com/okason97/Bringing-Balance-to-Hand-Shape-Classification" target="_blank"> Code on GitHub</a>
 </div>
 
 ## Citation
 
 ```bibtex
-@inproceedings{stanchi2024signattention,
-  title={SignAttention: On the Interpretability of Transformer Models for Sign Language Translation},
-  author={Stanchi, Oscar Agust{\'\i}n and Bianco, Pedro Alejandro Dal and Quiroga, Facundo Manuel and Ronchetti, Franco and Ferrante, Enzo},
-  booktitle={Interpretable AI: Past, Present and Future @ NeurIPS 2024},
-  year={2024}
+@article{rios2025bringing,
+  title={Bringing balance to hand shape classification: Mitigating data imbalance through generative models},
+  author={Rios, Gaston Gustavo and Dal Bianco, Pedro and Ronchetti, Franco and Quiroga, Facundo and Stanchi, Oscar and Ah{\'o}n, Santiago Ponte and Hasperu{\'e}, Waldo},
+  journal={Applied Soft Computing},
+  pages={113586},
+  year={2025},
+  publisher={Elsevier}
 }

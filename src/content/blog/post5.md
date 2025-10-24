@@ -1,30 +1,32 @@
 ---
-title: "VISTA: Vision Improvement via Split and Reconstruct Deep Neural Network for Fundus Image Quality Assessment"
+title: "SignAttention: On the Interpretability of Transformer Models for Sign Language Translation"
 description: >
-  This paper introduces a deep learning model for assessing fundus image quality, essential for diagnosing eye conditions like cataracts and diabetic retinopathy. The model preserves high resolution and includes an autoencoder for reconstruction and classification. Results on the EyeQ dataset show 90.66% accuracy, 88.43% precision, 89.05% recall, and an F1-score of 88.68%.
-pubDate: "Oct 9 2024"
-heroImage: "/assets/vista.png"
-badge: "Journal paper"
-tags: ["Autoencoder Network", "Explainability", "Fundus Image", "Gradability", "Interpretability", "Quality Assessment", "Retinal Image"]
-authors: ["Saif Khalid", "Saddam Abdulwahab", "Oscar Agustín Stanchi", "Facundo Manuel Quiroga", "Franco Ronchetti", "Domenec Puig", "Hatem A. Rashwan"]
+  This paper studies a Transformer-based model for translating Greek Sign Language to glosses and text. It finds that the model focuses on clusters of frames, with alignment weakening as glosses increase, and shifts from video frames to predicted tokens during translation. This work enhances understanding of SLT models and promotes more transparent translation systems.
+pubDate: "Oct 18 2024"
+heroImage: "/assets/signattention.png"
+badge: "Conference paper"
+tags: ["Sign Language Translation", "Transformers", "Attention Mechanism", "Greek Sign Language", "Interpretability"]
+authors: ["Oscar Agustín Stanchi", "Pedro Alejandro Dal Bianco", "Facundo Manuel Quiroga", "Franco Ronchetti", "Enzo Ferrante"]
+award: "Selected as one of six presentations for the oral session."
+award_name: "Spotlight @ NeurIPS 2024"
 ---
 
 ## Abstract
 
-Widespread eye conditions such as cataracts, diabetic retinopathy, and glaucoma impact people worldwide. Ophthalmology uses fundus photography for diagnosing these retinal disorders, but fundus images are prone to image quality challenges. Accurate diagnosis hinges on high-quality fundus images. Therefore, there is a need for image quality assessment methods to evaluate fundus images before diagnosis. Consequently, this paper introduces a deep learning model tailored for fundus images that supports large images. Our division method centres on preserving the original image’s high-resolution features while maintaining low computing and high accuracy. The proposed approach encompasses two fundamental components: an autoencoder model for input image reconstruction and image classification to classify the image quality based on the latent features extracted by the autoencoder, all performed at the original image size, without alteration, before reassembly for decoding networks. Through post hoc interpretability methods, we verified that our model focuses on key elements of fundus image quality. Additionally, an intrinsic interpretability module has been designed into the network that allows decomposing class scores into underlying concepts quality such as brightness or presence of anatomical structures. Experimental results in our model with EyeQ, a fundus image dataset with three categories (Good, Usable, and Rejected) demonstrate that our approach produces competitive outcomes compared to other deep learning-based methods with an overall accuracy of 0.9066, a precision of 0.8843, a recall of 0.8905, and an impressive F1-score of 0.8868. The code is publicly available at https://github.com/saifalkhaldiurv/VISTA_-Image-Quality-Assessment.
+This paper presents the first comprehensive interpretability analysis of a Transformer-based Sign Language Translation (SLT) model, focusing on the translation from video-based Greek Sign Language to glosses and text. Leveraging the Greek Sign Language Dataset, we examine the attention mechanisms within the model to understand how it processes and aligns visual input with sequential glosses. Our analysis reveals that the model pays attention to clusters of frames rather than individual ones, with a diagonal alignment pattern emerging between poses and glosses, which becomes less distinct as the number of glosses increases. We also explore the relative contributions of cross-attention and self-attention at each decoding step, finding that the model initially relies on video frames but shifts its focus to previously predicted tokens as the translation progresses. This work contributes to a deeper understanding of SLT models, paving the way for the development of more transparent and reliable translation systems essential for real-world applications.
 
 <div class="mt-8">
-    <a class="btn" href="https://link.springer.com/article/10.1007/s00521-024-10174-6" target="_blank"> Full paper</a>
+    <a class="btn" href="https://arxiv.org/abs/2410.14506" target="_blank"> Full paper</a>
+    <span style="margin:10px"></span>
+    <a class="btn" href="https://github.com/pedroodb/sign_attention" target="_blank"> Code on GitHub</a>
 </div>
 
 ## Citation
 
 ```bibtex
-@article{khalid2024vista,
-  title={VISTA: vision improvement via split and reconstruct deep neural network for fundus image quality assessment},
-  author={Khalid, Saif and Abdulwahab, Saddam and Stanchi, Oscar Agust{\'\i}n and Quiroga, Facundo Manuel and Ronchetti, Franco and Puig, Domenec and Rashwan, Hatem A},
-  journal={Neural Computing and Applications},
-  pages={1--20},
-  year={2024},
-  publisher={Springer}
+@inproceedings{stanchi2024signattention,
+  title={SignAttention: On the Interpretability of Transformer Models for Sign Language Translation},
+  author={Stanchi, Oscar Agust{\'\i}n and Bianco, Pedro Alejandro Dal and Quiroga, Facundo Manuel and Ronchetti, Franco and Ferrante, Enzo},
+  booktitle={Interpretable AI: Past, Present and Future @ NeurIPS 2024},
+  year={2024}
 }

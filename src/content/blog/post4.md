@@ -1,34 +1,34 @@
 ---
-title: "Wavelength Calibration of Historical Spectrographic Plates with Dynamic Time Warping"
+title: "VISTA: Vision Improvement via Split and Reconstruct Deep Neural Network for Fundus Image Quality Assessment"
 description: >
-  The Facultad de Ciencias Astronómicas y Geofísicas at the UNLP holds 15,000 spectroscopic records on glass plates. Processing these records is currently manual and complex, especially for wavelength calibration. This work presents an automated pipeline using Dynamic Time Warping (DTW) to match lamp spectra to simulated data, achieving a 93% average IoU on 32 manually calibrated plates.
-pubDate: "Oct 7 2024" #11
-heroImage: "/assets/dtw_fcaglp.png"
-badge: "Conference paper"
-tags: ["Dynamic Time Warping", "Spectrographic records", "Spectrographic plates", "Optimization", "Wavelength calibration"]
-authors: ["Santiago Andres Ponte Ahón", "Juan Martín Seery", "Facundo Quiroga", "Franco Ronchetti", "Oscar Stanchi", "Pedro Dal Bianco", "Waldo Hasperué", "Yael Aidelman", "Roberto Gamen"]
+  This paper introduces a deep learning model for assessing fundus image quality, essential for diagnosing eye conditions like cataracts and diabetic retinopathy. The model preserves high resolution and includes an autoencoder for reconstruction and classification. Results on the EyeQ dataset show 90.66% accuracy, 88.43% precision, 89.05% recall, and an F1-score of 88.68%.
+pubDate: "Oct 9 2024"
+heroImage: "/assets/vista.png"
+badge: "Journal paper"
+tags: ["Autoencoder Network", "Explainability", "Fundus Image", "Gradability", "Interpretability", "Quality Assessment", "Retinal Image"]
+authors: ["Saif Khalid", "Saddam Abdulwahab", "Oscar Agustín Stanchi", "Facundo Manuel Quiroga", "Franco Ronchetti", "Domenec Puig", "Hatem A. Rashwan"]
 ---
 
 ## Abstract
 
-The Facultad de Ciencias Astronómicas y Geofísicas of the Universidad Nacional de La Plata counts with 15,000 spectroscopic records on glass plates with valuable and unique astronomical data.
+Widespread eye conditions such as cataracts, diabetic retinopathy, and glaucoma impact people worldwide. Ophthalmology uses fundus photography for diagnosing these retinal disorders, but fundus images are prone to image quality challenges. Accurate diagnosis hinges on high-quality fundus images. Therefore, there is a need for image quality assessment methods to evaluate fundus images before diagnosis. Consequently, this paper introduces a deep learning model tailored for fundus images that supports large images. Our division method centres on preserving the original image’s high-resolution features while maintaining low computing and high accuracy. The proposed approach encompasses two fundamental components: an autoencoder model for input image reconstruction and image classification to classify the image quality based on the latent features extracted by the autoencoder, all performed at the original image size, without alteration, before reassembly for decoding networks. Through post hoc interpretability methods, we verified that our model focuses on key elements of fundus image quality. Additionally, an intrinsic interpretability module has been designed into the network that allows decomposing class scores into underlying concepts quality such as brightness or presence of anatomical structures. Experimental results in our model with EyeQ, a fundus image dataset with three categories (Good, Usable, and Rejected) demonstrate that our approach produces competitive outcomes compared to other deep learning-based methods with an overall accuracy of 0.9066, a precision of 0.8843, a recall of 0.8905, and an impressive F1-score of 0.8868.
 
-Currently, processing these plates requires a complex manual process that involves several stages, requiring several hours to process a single plate. In particular, the wavelength calibration requires the determination of the wavelength range in which the data were observed. This is achieved by matching the spectrum of the comparison lamp on the plate to the reference spectrum. Since many times neither the metadata of the lamps nor the physical lamps are available, automating the tasks requires a semi-blind approach that uses simulated data as a reference. However, the simulated data differs significantly from the physical lamps, given that many peaks determined by theoretical calculations are rarely observed in practice, and conversely the physical lamps and spectrograph carry imperfections that cause unexpected peaks.
-
-In this work, we propose an wavelength calibration pipeline that enables automated matching of the wavelength of the comparison lamps via Dynamic Time Warping (DTW) between the samples and simulated data. Our best model achieves a 93% average Intersection-over-Union (IoU) over a set of 32 manually calibrated plates.
+<!-- The code is publicly available at https://github.com/saifalkhaldiurv/VISTA_-Image-Quality-Assessment. -->
 
 <div class="mt-8">
-    <a class="btn" href="https://link.springer.com/chapter/10.1007/978-3-031-70807-7_5" target="_blank"> Full paper</a>
+    <a class="btn" href="https://link.springer.com/article/10.1007/s00521-024-10174-6" target="_blank"> Full paper</a>
+    <span style="margin:10px"></span>
+    <a class="btn" href="https://github.com/midusi/fundus-vista" target="_blank"> Code on GitHub</a>
 </div>
 
 ## Citation
 
 ```bibtex
-@inproceedings{ponte2024wavelength,
-  title={Wavelength Calibration of Historical Spectrographic Plates with Dynamic Time Warping},
-  author={Ponte Ah{\'o}n, Santiago Andres and Seery, Juan Mart{\'\i}n and Quiroga, Facundo and Ronchetti, Franco and Stanchi, Oscar and Dal Bianco, Pedro and Hasperu{\'e}, Waldo and Aidelman, Yael and Gamen, Roberto},
-  booktitle={Conference on Cloud Computing, Big Data \& Emerging Topics},
-  pages={59--73},
+@article{khalid2024vista,
+  title={VISTA: Vision Improvement via Split and Reconstruct Deep Neural Network for Fundus Image Quality Assessment},
+  author={Khalid, Saif and Abdulwahab, Saddam and Stanchi, Oscar Agust{\'\i}n and Quiroga, Facundo Manuel and Ronchetti, Franco and Puig, Domenec and Rashwan, Hatem A},
+  journal={Neural Computing and Applications},
+  pages={1--20},
   year={2024},
-  organization={Springer}
+  publisher={Springer}
 }
