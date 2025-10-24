@@ -1,6 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+
+const birthDate = new Date("1998-11-10");
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+const hasHadBirthday =
+  today.getMonth() > birthDate.getMonth() ||
+  (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+if (!hasHadBirthday) age--;
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
@@ -9,7 +17,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-10 text-justify">
-  I'm a 26-year-old Computer Engineer from UNLP. I have strong technical experience in digital electronics system design, software development, and safety engineering (with training in ARENA). I also hold a Master's degree in Big Data, with a focus on Data Mining, Machine Learning, and Deep Learning.
+  I'm a {age}-year-old Computer Engineer from UNLP. I have strong technical experience in digital electronics system design, software development, and safety engineering (with training in ARENA). I also hold a Master's degree in Big Data, with a focus on Data Mining, Machine Learning, and Deep Learning.
   <br>
   <br>
   Currently, I lead an interpretability project at the III-LIDI research lab at UNLP, and I'm also supervising a bachelor's thesis while providing consulting support to bachelor's and master's students on their own projects.
